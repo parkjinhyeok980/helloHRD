@@ -34,7 +34,7 @@ async function startGuest() {
       <section class="landing-actions panel" aria-labelledby="start-heading">
         <span class="start-icon" aria-hidden="true">✦</span>
         <h2 id="start-heading">더 가벼운 교육 운영,<br>지금 시작해 보세요.</h2>
-        <p>hello HRD가 처음이신가요?<br>우리 팀만의 교육 관리 공간을 만들어 보세요.</p>
+        <p>helloHRD가 처음이신가요?<br>우리 팀만의 교육 관리 공간을 만들어 보세요.</p>
         <a class="primary-button start-button" href="#/signup">회원가입 <span aria-hidden="true">→</span></a>
         <a class="outline-button start-button" href="#/login">로그인</a>
         <div class="start-divider"><span>먼저 둘러보고 싶다면</span></div>

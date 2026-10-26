@@ -12,7 +12,7 @@ from openpyxl.utils.exceptions import InvalidFileException
 from employees.models import Department, Employee
 
 from .models import Training, TrainingParticipant
-from helloHR.payloads import read_json_object
+from helloHRD.payloads import read_json_object
 from .queries import participant_queryset
 from .serializers import serialize_participant
 

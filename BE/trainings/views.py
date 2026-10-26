@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_GET, require_http_methods
 
-from helloHR.payloads import read_json_object
+from helloHRD.payloads import read_json_object
 from .models import Training
 from .queries import training_queryset
 from .serializers import serialize_training

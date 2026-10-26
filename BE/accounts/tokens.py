@@ -18,7 +18,7 @@ def password_stamp(user):
 def issue_token(user, jti=None):
     now = int(datetime.now(timezone.utc).timestamp())
     claims = {'sub': str(user.pk), 'iat': now, 'exp': now + settings.JWT_ACCESS_TTL_SECONDS,
-              'jti': jti or uuid4().hex, 'iss': 'helloHR', 'aud': 'helloHR-api',
+              'jti': jti or uuid4().hex, 'iss': 'helloHRD', 'aud': 'helloHRD-api',
               'pwd': password_stamp(user)}
     return jwt.encode(claims, settings.JWT_SIGNING_KEY, algorithm='HS256'), claims
 
@@ -56,7 +56,7 @@ class JWTAuthenticationMiddleware:
             if token:
                 try:
                     claims = jwt.decode(token, settings.JWT_SIGNING_KEY, algorithms=['HS256'],
-                        issuer='helloHR', audience='helloHR-api',
+                        issuer='helloHRD', audience='helloHRD-api',
                         options={'require': ['sub', 'iat', 'exp', 'jti', 'iss', 'aud', 'pwd']})
                     if not claims['sub'].isdigit() or len(claims['sub']) > 18:
                         raise jwt.InvalidTokenError()

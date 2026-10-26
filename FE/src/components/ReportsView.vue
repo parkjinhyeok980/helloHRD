@@ -64,7 +64,7 @@ onBeforeUnmount(() => { version++ })
 <template>
   <div class="report-layout">
     <section v-if="report" ref="reportSheet" class="panel report-sheet">
-      <div class="report-topline"><span>hello HRD</span><span>EDUCATION REPORT</span></div>
+      <div class="report-topline"><span>helloHRD</span><span>EDUCATION REPORT</span></div>
       <h2>교육 결과 보고서</h2><p class="report-subtitle">{{ report.title }}</p>
       <div class="report-meta">
         <div><span>교육 일시</span><b>{{ formatDate(report.date) }} {{ report.time }}</b></div>

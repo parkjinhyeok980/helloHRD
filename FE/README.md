@@ -1,4 +1,4 @@
-# hello,HRD 프런트엔드
+# helloHRD 프런트엔드
 
 Vue 3와 Vite로 만든 교육 운영 MVP 화면입니다. `docsimg`의 관리자 화면과 모바일 참여자 흐름을 참고했습니다.
 

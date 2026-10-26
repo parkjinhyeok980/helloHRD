@@ -11,7 +11,7 @@ from django.http import JsonResponse
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_GET, require_POST
 
-from helloHR.payloads import read_json_object
+from helloHRD.payloads import read_json_object
 from .models import Account
 from .tokens import issue_token, attach_token, revoke_token
 from .decorators import account_required

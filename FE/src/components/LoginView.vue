@@ -15,7 +15,7 @@ const busy = ref(false)
 const enteringGuest = ref(false)
 const error = ref('')
 try {
-  email.value = localStorage.getItem('hellohr_saved_email') || ''
+  email.value = localStorage.getItem('hellohrd_saved_email') || ''
   remember.value = Boolean(email.value)
 } catch { /* Storage may be disabled in this browser. */ }
 
@@ -58,8 +58,8 @@ async function submit() {
       email: email.value.trim(), password: password.value, name: name.value.trim(),
     })
     try {
-      if (remember.value) localStorage.setItem('hellohr_saved_email', email.value.trim())
-      else localStorage.removeItem('hellohr_saved_email')
+      if (remember.value) localStorage.setItem('hellohrd_saved_email', email.value.trim())
+      else localStorage.removeItem('hellohrd_saved_email')
     } catch { /* Login still works without local storage. */ }
     password.value = ''
     if (new URLSearchParams(window.location.search).has('training')) window.location.replace('/')

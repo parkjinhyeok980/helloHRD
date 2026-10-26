@@ -5,7 +5,7 @@ import { section, openSection } from '../composables/useDemoStore'
 
 <template>
     <aside class="sidebar">
-      <button type="button" class="brand brand-home" aria-label="hello HRD 대시보드로 이동" @click="openSection('dashboard')"><span class="brand-mark" aria-hidden="true">✦</span><span>hello HRD<small>EDUCATION OPERATIONS</small></span></button>
+      <button type="button" class="brand brand-home" aria-label="helloHRD 대시보드로 이동" @click="openSection('dashboard')"><span class="brand-mark" aria-hidden="true">✦</span><span>helloHRD<small>EDUCATION OPERATIONS</small></span></button>
       <div class="workspace-label">WORKSPACE</div>
       <nav class="side-nav" aria-label="주 메뉴">
         <button :class="{ active: section === 'dashboard' }" :aria-current="section === 'dashboard' ? 'page' : undefined" @click="openSection('dashboard')"><span>▦</span> 대시보드</button>

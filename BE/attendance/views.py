@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_POST
 
 from trainings.models import Training, TrainingParticipant
-from helloHR.payloads import read_json_object
+from helloHRD.payloads import read_json_object
 from trainings.serializers import serialize_participant
 from .models import Attendance, Signature
 

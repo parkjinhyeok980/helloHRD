@@ -106,7 +106,7 @@ class GuestAccountTests(TestCase):
         owner = get_user_model().objects.create_user(username='private')
         private = Training.objects.create(owner=owner, title='Private')
         legacy = Training.objects.create(title='Legacy')
-        person, _ = enroll(legacy, {'employee_number': 'OLD', 'name': 'Kim', 'department': 'HR'})
+        person, _ = enroll(legacy, {'employee_number': 'OLD', 'name': 'Kim', 'department': 'HRD'})
         attendance = Attendance.objects.create(participant=person)
         signature = Signature.objects.create(attendance=attendance, strokes=[[[0, 0], [1, 1]]])
         migration = import_module('accounts.migrations.0002_guest_account')
@@ -127,7 +127,7 @@ class IsolationTests(TestCase):
         self.b = get_user_model().objects.create_user(username='b')
         self.training_a = Training.objects.create(owner=self.a, title='A')
         self.training_b = Training.objects.create(owner=self.b, title='B')
-        self.person = {'employee_number': 'E001', 'name': 'Kim', 'department': 'HR'}
+        self.person = {'employee_number': 'E001', 'name': 'Kim', 'department': 'HRD'}
         self.pa, _ = enroll(self.training_a, self.person)
         self.pb, _ = enroll(self.training_b, self.person)
         authenticate_client(self.client, self.a)

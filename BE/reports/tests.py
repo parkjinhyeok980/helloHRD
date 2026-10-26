@@ -10,7 +10,7 @@ class SignedReportTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(username='owner', password='test-password')
         self.training = Training.objects.create(owner=self.user, title='Signed report')
-        department = Department.objects.create(owner=self.user, name='HR')
+        department = Department.objects.create(owner=self.user, name='HRD')
         employee = Employee.objects.create(owner=self.user, name='Kim', employee_number='E01', department=department)
         self.person = TrainingParticipant.objects.create(training=self.training, employee=employee)
         authenticate_client(self.client, self.user)

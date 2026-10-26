@@ -7,7 +7,7 @@ def create_guest_and_assign_legacy(apps, schema_editor):
     User = apps.get_model(settings.AUTH_USER_MODEL)
     Account = apps.get_model('accounts', 'Account')
     guest = User.objects.using(alias).create(
-        username='guest', email='guest@hellohr.invalid', password='!',
+        username='guest', email='guest@hellohrd.invalid', password='!',
         is_active=True, is_staff=False, is_superuser=False,
     )
     Account.objects.using(alias).create(user_id=guest.pk, email=guest.email, name='게스트')

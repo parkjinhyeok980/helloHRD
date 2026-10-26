@@ -1,14 +1,14 @@
 <template>
   <div class="public-layout">
     <header class="public-header">
-      <a href="#/" class="brand public-brand" aria-label="hello HRD 시작페이지">
+      <a href="#/" class="brand public-brand" aria-label="helloHRD 시작페이지">
         <span class="brand-mark" aria-hidden="true">✦</span>
-        <span>hello HRD<small>EDUCATION OPERATIONS</small></span>
+        <span>helloHRD<small>EDUCATION OPERATIONS</small></span>
       </a>
       <a class="public-header-link" href="#/login">로그인 <span aria-hidden="true">↗</span></a>
     </header>
     <slot />
-    <footer class="public-footer"><span>hello HRD</span><span>함께 배우고, 더 나은 내일로.</span></footer>
+    <footer class="public-footer"><span>helloHRD</span><span>함께 배우고, 더 나은 내일로.</span></footer>
   </div>
 </template>
 

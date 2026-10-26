@@ -13,7 +13,7 @@ function openAdmin() {
 <template>
   <div class="participant-page">
     <header class="participant-header">
-      <div class="brand"><span class="brand-mark">✦</span><span>hello HRD</span></div>
+      <div class="brand"><span class="brand-mark">✦</span><span>helloHRD</span></div>
       <button class="mode-link" @click="openAdmin">{{ user ? '관리자 화면으로 →' : '담당자 로그인 →' }}</button>
     </header>
     <div class="phone-shell">

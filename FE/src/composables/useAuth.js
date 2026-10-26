@@ -12,7 +12,7 @@ let refreshing = null
 let signingOut = false
 let lastRefresh = 0
 let refreshInterval = 30000
-const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('hellohr-auth') : null
+const channel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('hellohrd-auth') : null
 
 function clearAuth(message = '') {
   version++

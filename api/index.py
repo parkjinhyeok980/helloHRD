@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlencode
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "BE"))
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "helloHR.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "helloHRD.settings")
 
 from django.core.wsgi import get_wsgi_application
 

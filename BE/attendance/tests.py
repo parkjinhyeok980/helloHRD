@@ -12,7 +12,7 @@ class SignedAttendanceTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(username='owner', password='test-password')
         self.training = Training.objects.create(owner=self.user, title='Signature test', attendance_code='0123')
-        department = Department.objects.create(owner=self.user, name='HR')
+        department = Department.objects.create(owner=self.user, name='HRD')
         employee = Employee.objects.create(owner=self.user, name='Kim', employee_number='E001', department=department)
         self.person = TrainingParticipant.objects.create(training=self.training, employee=employee)
         self.client = Client(enforce_csrf_checks=True)

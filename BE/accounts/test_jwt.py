@@ -18,7 +18,7 @@ class JWTTests(TestCase):
             response = self.client.post('/api/accounts/guest/')
         cookie = response.cookies[settings.JWT_COOKIE_NAME]
         claims = jwt.decode(cookie.value, settings.JWT_SIGNING_KEY, algorithms=['HS256'],
-                            audience='helloHR-api', issuer='helloHR')
+                            audience='helloHRD-api', issuer='helloHRD')
         self.assertEqual(claims['sub'], str(self.user.pk))
         self.assertEqual(claims['exp'] - claims['iat'], 60)
         self.assertEqual(response.json()['expires_at'], claims['exp'])
@@ -96,7 +96,7 @@ class JWTTests(TestCase):
         self.assertEqual(response.json()['expires_at'] - response.json()['server_time'], 3600)
         self.assertEqual(client.cookies['csrftoken'].value, csrf)
         new_token = client.cookies[settings.JWT_COOKIE_NAME].value
-        decoded = jwt.decode(new_token, settings.JWT_SIGNING_KEY, algorithms=['HS256'], audience='helloHR-api')
+        decoded = jwt.decode(new_token, settings.JWT_SIGNING_KEY, algorithms=['HS256'], audience='helloHRD-api')
         self.assertEqual(decoded['jti'], old_claims['jti'])
         self.assertEqual(decoded['sub'], old_claims['sub'])
         # Both parallel requests and different tabs can use the previous version.

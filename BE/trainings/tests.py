@@ -74,7 +74,7 @@ class TrainingApiTests(TestCase):
         training = Training.objects.create(owner=self.user, title='Validation')
         path = f'/api/trainings/{training.id}/participants/'
         person = self.request_json('post', path, {
-            'employee_number': 'E01', 'name': 'Kim', 'department': 'HR',
+            'employee_number': 'E01', 'name': 'Kim', 'department': 'HRD',
         }).json()
         endpoints = [
             ('post', '/api/trainings/'),
@@ -104,7 +104,7 @@ class TrainingApiTests(TestCase):
 
         def enroll_signed(number):
             person = self.request_json('post', path, {
-                'employee_number': number, 'name': number, 'department': 'HR',
+                'employee_number': number, 'name': number, 'department': 'HRD',
             }).json()
             attendance = Attendance.objects.create(participant_id=person['id'])
             Signature.objects.create(attendance=attendance, strokes=[[[0, 0], [1, 1]]])
